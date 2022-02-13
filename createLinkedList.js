@@ -8,14 +8,6 @@ class Node {
     }
 }
 
-//Print the elements of the linked list
-function printList() {
-    const n = head;
-    while(n != null) {
-        console.log("Element: ", n.data);
-        n = n.next;
-    }
-}
 
 //Create a simple linked list with 1 node;
 

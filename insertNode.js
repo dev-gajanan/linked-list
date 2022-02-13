@@ -37,6 +37,12 @@ function insertDataAtTail(data) {
 
 //Insert data at any index of the list
 function insertDataAtIndex(position, data) {
+
+    if(position == 1) {
+        insertDataAtHead(data);
+        return;
+    }
+
     var temp = head;
     let ctr = 1;
 
@@ -77,6 +83,9 @@ function main() {
     insertDataAtTail(15);
     print();
     insertDataAtIndex(3, 14);
+    print();
+
+    insertDataAtIndex(1, 8);
     print();
 
     return 0;
