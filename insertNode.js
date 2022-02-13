@@ -38,6 +38,7 @@ function insertDataAtTail(data) {
 //Insert data at any index of the list
 function insertDataAtIndex(position, data) {
 
+    //insert data at first position
     if(position == 1) {
         insertDataAtHead(data);
         return;
@@ -49,6 +50,12 @@ function insertDataAtIndex(position, data) {
     while(ctr < position - 1) {
         temp = temp.next;
         ctr++;
+    }
+
+    //insert data at last position
+    if(temp.next == null) {
+        insertDataAtTail(data);
+        return;
     }
 
     //create a node for new data
@@ -84,8 +91,9 @@ function main() {
     print();
     insertDataAtIndex(3, 14);
     print();
-
     insertDataAtIndex(1, 8);
+    print();
+    insertDataAtIndex(6, 100);
     print();
 
     return 0;
