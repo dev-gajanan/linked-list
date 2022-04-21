@@ -1,7 +1,7 @@
 # linked-list
 
-Linked list data structure;
+Linked list data structure; <br>
 
-1- Insert node
-2- Traverse
-3- Delete Node from a specific position
+1- Insert node <br>
+2- Traverse <br>
+3- Delete Node from a specific position<br>
