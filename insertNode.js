@@ -65,6 +65,40 @@ function insertDataAtIndex(position, data) {
 
 }
 
+// Delete a node from a position
+function deleteNode(position, data) {
+
+    var temp = new Node(data);
+
+    //deletign start node
+    if(position == 1) {
+
+        var tmp = head;
+        head = tmp.next;
+        tmp.next = null;
+        return;
+
+    } else {
+
+        //deleting middle and last node
+        var curr = head;
+        var prev = null;
+
+        let ctr = 1;
+        while(ctr <= position) {
+            prev = curr;
+            curr = curr.next;
+            ctr++;
+        }
+
+        prev.next = curr.next;
+        
+    }
+
+}
+
+
+
 //print list
 function print() {
     let result = "";
@@ -94,6 +128,15 @@ function main() {
     insertDataAtIndex(1, 8);
     print();
     insertDataAtIndex(6, 100);
+    print();
+
+    deleteNode(1, head);
+    print();
+
+    deleteNode(3, head);
+    print();
+
+    deleteNode(3, head);
     print();
 
     return 0;
